@@ -6,7 +6,7 @@ import { LoginDTO } from '../dto/login';
 import { UserService } from './user';
 import { RoleService } from './role';
 import { CacheManager } from '@midwayjs/cache';
-import { XiaojumaoConfig } from '../../typings/config/xiaojumao';
+import { XiaojumaoConfig } from '../typings/xiaojumao';
 
 /**
  * 登录
