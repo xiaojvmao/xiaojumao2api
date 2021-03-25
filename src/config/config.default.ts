@@ -19,14 +19,23 @@ export default (appInfo: EggAppInfo) => {
     replaceEggLogger: true
   }
 
-  config.xiaojumao = {
-    jwt: {
+  config.jwt = {
       secret: "12nuiasdu989je923jjasnbhdjbhsj",
       token: {
           expire: 36000000,
           refreshExpire: 36000000
       }
-    }
+  }
+
+  config.cos = {
+    APPID: 1253399808,
+    secretId: "AKIDOZVmpctJOBizFFuWquiFXjhQt74kp8Vc",
+    secretKey: "0jMvLUDt63jALL4XxhBVZN0NT9YhZBwP",
+    baseSecret: "najk32njkneuia12n3dui9ani32"
+  }
+
+  config.database = {
+    url: "sh-cdb-9e23suum.sql.tencentcdb.com:60219"
   }
 
   return config;

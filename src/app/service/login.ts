@@ -6,7 +6,7 @@ import { LoginDTO } from '../dto/login';
 import { UserService } from './user';
 import { RoleService } from './role';
 import { CacheManager } from '@midwayjs/cache';
-import { XiaojumaoConfig } from '../typings/xiaojumao';
+import { JwtConfig } from '../../typings/xiaojumao';
 
 /**
  * 登录
@@ -26,8 +26,8 @@ export class LoginService {
   @Inject()
   roleService: RoleService;
 
-  @Config("xiaojumao")
-  config: XiaojumaoConfig
+  @Config("jwt")
+  config: JwtConfig
   /**
    * 登录
    * @param login
@@ -48,7 +48,7 @@ export class LoginService {
         return '账户或密码不正确~'
       }
 
-      const { expire, refreshExpire } = this.config.jwt.token;
+      const { expire, refreshExpire } = this.config.token;
       const result = {
         expire,
         token: await this.generateToken(user, expire),

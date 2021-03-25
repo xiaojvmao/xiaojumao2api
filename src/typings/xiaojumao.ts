@@ -1,10 +1,7 @@
-export interface XiaojumaoConfig {
-  jwt: {
-      secret: string;
-      token: {
-          expire: number;
-          refreshExpire: number;
-      };
+export interface JwtConfig {
+  secret: string;
+  token: {
+    expire: number;
+    refreshExpire: number;
   };
 }
-
