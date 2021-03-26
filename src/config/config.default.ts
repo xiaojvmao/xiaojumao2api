@@ -35,7 +35,6 @@ export default (appInfo: EggAppInfo) => {
   }
 
   config.database = {
-    url: "sh-cdb-9e23suum.sql.tencentcdb.com:60219"
   }
 
   return config;

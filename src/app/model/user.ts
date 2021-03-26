@@ -1,5 +1,5 @@
 import { EntityModel } from '@midwayjs/orm';
-import { Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm';
+import { Column, PrimaryGeneratedColumn } from 'typeorm';
 
 import { BaseModel } from './base';
 

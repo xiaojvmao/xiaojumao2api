@@ -1,7 +1,8 @@
 import { EntityModel } from '@midwayjs/orm';
-import { Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm';
+import { Column, PrimaryGeneratedColumn, JoinColumn, ManyToOne } from 'typeorm';
 
 import { BaseModel } from './base';
+import { SingerModel } from './singer';
 
 @EntityModel({
   name: 'song',
@@ -21,22 +22,29 @@ export class UserModel extends BaseModel {
 
   @Column({
     type: 'varchar',
-    length: 60,
-    nullable: true,
-    comment: '',
+    length: 190,
+    comment: '地址',
   })
-  password: string;
+  src: string;
 
   @Column({
-    type: 'varchar',
-    comment: '歌手名',
+    type: 'integer',
+    comment: '歌手id'
   })
-  singername: string;
+  singer_id: string
 
   @Column({
     type: 'varchar',
     length: 255,
-    comment: '背景',
+    comment: '背景图',
   })
-  background: string;
+  background_img: string;
+
+  @ManyToOne(type => SingerModel)
+  @JoinColumn({
+    name: 'sing',
+    referencedColumnName: 'id',
+  })
+  singer: SingerModel
+
 }

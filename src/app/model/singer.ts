@@ -1,12 +1,12 @@
 import { EntityModel } from '@midwayjs/orm';
-import { Column, PrimaryGeneratedColumn, ManyToMany, JoinTable } from 'typeorm';
+import { Column, PrimaryGeneratedColumn } from 'typeorm';
 
 import { BaseModel } from './base';
 
 @EntityModel({
   name: 'singers',
 })
-export class UserModel extends BaseModel {
+export class SingerModel extends BaseModel {
   @PrimaryGeneratedColumn({
     type: 'integer',
   })
@@ -16,12 +16,6 @@ export class UserModel extends BaseModel {
     type: 'varchar',
     length: 190,
     comment: '歌名',
-  })
-  name: string;
-
-  @Column({
-    type: 'varchar',
-    comment: '名称',
   })
   name: string;
 
