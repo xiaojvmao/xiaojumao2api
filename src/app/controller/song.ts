@@ -4,7 +4,7 @@ import { UserService } from '../service/user/user';
 
 @Provide()
 @Controller('/api')
-export class APIController {
+export class SongController {
   @Inject()
   ctx: Context;
 

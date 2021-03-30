@@ -3,8 +3,8 @@ import { Inject, Provide, Config } from '@midwayjs/decorator';
 import * as jwt from 'jsonwebtoken';
 import { Context } from 'egg';
 import { LoginDTO } from '../dto/login';
-import { UserService } from './user';
-import { RoleService } from './role';
+import { UserService } from './user/user';
+import { RoleService } from './admin/role';
 import { CacheManager } from '@midwayjs/cache';
 import { JwtConfig } from '../../typings/xiaojumao';
 

@@ -7,7 +7,7 @@ import { SingerModel } from './singer';
 @EntityModel({
   name: 'song',
 })
-export class UserModel extends BaseModel {
+export class SongModel extends BaseModel {
   @PrimaryGeneratedColumn({
     type: 'integer',
   })
@@ -29,20 +29,22 @@ export class UserModel extends BaseModel {
 
   @Column({
     type: 'integer',
-    comment: '歌手id'
+    comment: '歌手id',
+    name: 'singer_id'
   })
-  singer_id: string
+  singerId: string
 
   @Column({
     type: 'varchar',
     length: 255,
     comment: '背景图',
+    name: 'background_img'
   })
-  background_img: string;
+  backgroundImg: string;
 
   @ManyToOne(type => SingerModel)
   @JoinColumn({
-    name: 'sing',
+    name: 'singer_id',
     referencedColumnName: 'id',
   })
   singer: SingerModel

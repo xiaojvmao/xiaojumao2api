@@ -1,4 +1,5 @@
 import { EggAppConfig, EggAppInfo, PowerPartial } from 'egg';
+import { ConnectionOptions } from 'typeorm';
 
 export type DefaultConfig = PowerPartial<EggAppConfig>;
 
@@ -34,8 +35,8 @@ export default (appInfo: EggAppInfo) => {
     baseSecret: "najk32njkneuia12n3dui9ani32"
   }
 
-  config.database = {
-  }
+  config.orm = {
+  } as ConnectionOptions
 
   return config;
 };

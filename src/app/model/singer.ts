@@ -15,7 +15,7 @@ export class SingerModel extends BaseModel {
   @Column({
     type: 'varchar',
     length: 190,
-    comment: '歌名',
+    comment: '歌手名',
   })
   name: string;
 
