@@ -25,4 +25,12 @@ export class SingerModel extends BaseModel {
     comment: '头像',
   })
   avatar: string;
+
+  @Column({
+    type: 'integer',
+    comment: '网易云id',
+    name: 'cloud_id'
+  })
+  cloudId: string;
+
 }

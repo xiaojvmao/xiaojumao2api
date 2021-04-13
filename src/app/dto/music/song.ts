@@ -18,6 +18,9 @@ export class QueryDTO extends ListBaseDto {
   @Rule(RuleType.string().trim().max(50).optional())
   src?: string;
 
+  @CreateApiPropertyDoc('筛选字段-歌曲对应网易云id')
+  @Rule(RuleType.string().trim().max(50).optional())
+  cloudId?: string;
 }
 
 /**

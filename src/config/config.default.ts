@@ -36,6 +36,14 @@ export default (appInfo: EggAppInfo) => {
   }
 
   config.orm = {
+    type: 'mysql',
+    host: 'sh-cdb-9e23suum.sql.tencentcdb.com',
+    port: 60219,
+    username: 'root',
+    password: 'sty987412365',
+    database: 'xiaojumao',
+    synchronize: false,
+    logging: true,
   } as ConnectionOptions
 
   return config;

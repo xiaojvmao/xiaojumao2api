@@ -1,19 +1,19 @@
-import { Inject, Controller, Post, Provide, Query } from '@midwayjs/decorator';
+import { Inject, Controller, Provide, Query, Get } from '@midwayjs/decorator';
 import { Context } from 'egg';
-import { UserService } from '../service/user/user';
+import { SongService } from '../service/music/song';
 
 @Provide()
-@Controller('/api')
+@Controller('/song')
 export class SongController {
   @Inject()
   ctx: Context;
 
   @Inject()
-  userService: UserService;
+  songService: SongService;
 
-  @Post('/get_user')
-  async getUser(@Query() uid) {
-    const user = await this.userService.getUser({ uid });
-    return { success: true, message: 'OK', data: user };
+  @Get('/')
+  async getSong(@Query() id) {
+    const song = await this.songService.getSongById({ id });
+    return this.ctx.helper.success(song);
   }
 }

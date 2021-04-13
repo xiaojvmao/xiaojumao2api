@@ -42,6 +42,13 @@ export class SongModel extends BaseModel {
   })
   backgroundImg: string;
 
+  @Column({
+    type: 'integer',
+    comment: '歌曲对应网易云id',
+    name: 'cloud_id'
+  })
+  cloudId: string
+
   @ManyToOne(type => SingerModel)
   @JoinColumn({
     name: 'singer_id',

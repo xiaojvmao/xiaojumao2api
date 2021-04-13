@@ -29,12 +29,6 @@ export class UserModel extends BaseModel {
 
   @Column({
     type: 'varchar',
-    comment: '名称',
-  })
-  name: string;
-
-  @Column({
-    type: 'varchar',
     length: 255,
     comment: '头像',
   })

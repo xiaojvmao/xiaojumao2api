@@ -6,6 +6,7 @@ import { join } from 'path';
 
 @Configuration({
   imports: [
+    '@midwayjs/orm',
     cache   // 导入 cache 组件
   ],
   importConfigs: [

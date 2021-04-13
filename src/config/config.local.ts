@@ -2,9 +2,6 @@ import { ConnectionOptions } from 'typeorm';
 
 export const security = {
   csrf: false,
-  orm: {
-
-  }
 }
 
 // 数据库配置
@@ -13,8 +10,8 @@ export const orm: ConnectionOptions = {
   host: 'sh-cdb-9e23suum.sql.tencentcdb.com',
   port: 60219,
   username: 'root',
-  password: '987412365',
+  password: 'sty987412365',
   database: 'xiaojumao',
-  synchronize: false,
+  synchronize: true,
   logging: true,
 };
