@@ -4,7 +4,7 @@ import { Context } from 'egg';
 import { UploadService } from '../service/upload';
 
 @Provide()
-@Controller('/api/common/upload')
+@Controller('/common/upload')
 export class UploadController {
 
   @Inject()
