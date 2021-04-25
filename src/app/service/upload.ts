@@ -16,12 +16,13 @@ export class UploadService {
       SecretKey: this.cosConfig.secretKey,
     })
     const fileName = this.encrypt(stream.filename)
-    cos.putObject({
+    const result = cos.putObject({
       Bucket: 'mv-1253399808', /* 必须 */
       Region: 'ap-shanghai',
       Key: fileName,
       Body: stream
     })
+    return result
   }
   private encrypt(fileName?: string) {
     fileName = fileName || this.cosConfig.baseSecret;
